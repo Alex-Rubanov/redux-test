@@ -17,6 +17,11 @@ const reducer = (state = initialState, action) => {
             ...state,
             counter: state.counter * action.payload
         };
+    case 'RESET':
+        return {
+            ...state,
+            counter: 0
+        };
     default: 
       return state;
   }

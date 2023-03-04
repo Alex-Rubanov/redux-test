@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { inc, dec, rnd } from '../actions';
+import { inc, dec, rnd, reset } from '../actions';
 
 const Counter = () => {
 
@@ -12,16 +12,9 @@ const Counter = () => {
             <button onClick={() => dispatch(dec())} className="btn btn-primary">DEC</button>
             <button onClick={() => dispatch(inc())} className="btn btn-primary">INC</button>
             <button onClick={() => dispatch(rnd())} className="btn btn-primary">RND</button>
+            <button onClick={() => dispatch(reset())} className="btn btn-primary">RESET</button>
         </div>
     )
 };
-
-// const mapStateToProps = (state) => {
-//     return {
-//         counter : state.value
-//     }
-// }
-
-// export default connect(mapStateToProps, actions)(Counter);
 
 export default Counter;
